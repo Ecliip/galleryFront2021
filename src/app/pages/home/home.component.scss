@@ -3,30 +3,39 @@
 
 .header {
   height: 6vh;
-  background-color: yellow;
+  background-color: $orangePantone;
 }
 
 .footer{
   height: 6vh;
-  background-color: yellow;
+  background-color: $byzantium;
 }
 
 .home {
+  color: $honeydew;
   font-size: 1.6rem;
   min-height: 100vh;
-  background-color: aquamarine;
+  background-color: $honeydew;
+
 }
 
 .intro {
   min-height: 80vh;
   padding: 0 10vw;
-  background-color: lightblue;
+  background-color: $prussianBlue;
   display: flex;
   align-items: center;
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+  background: url("../../../assets/images/gr.png") center right no-repeat, url("../../../assets/images/bbls.png") center left no-repeat, $prussianBlue;
+  background-size: 30%, 40%;
+  background-position: 80% 50%, 10% 50%;
 
   &__content {
+    background-color: rgb(37, 73, 135, .9);
+    padding: 2rem 2rem;
+    border-radius: 5px;
     width: 30vw;
-    border: 1px solid red;
+    //border: 1px solid red;
   }
 }
 
