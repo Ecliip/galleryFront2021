@@ -1,54 +1,67 @@
 <div class="home">
   <header class="header">
-
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#opinions">Opinions</a>
+    </nav>
   </header>
-<div class="intro">
+<div id="home" class="intro">
   <div class="intro__content">
-    <h1 class="h-primary">Some very short and interesting intro heading here</h1>
-    <p class="p-primary">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+    <h1 class="h-primary">I tried to electrocute it but got sweetmeat all over it.e</h1>
+    <p class="p-primary">My co-worker Aurthur has one of these. He says it looks white.
+      My neighbor Lonnie has one of these. She works as a hobbit and she says it looks microscopic.
+      talk about pleasure.</p>
   </div>
 <!--  <img src="../../../assets/images/abstraction1.png" alt="img">-->
 
 </div>
-  <div class="benefits">
+  <div id="benefits" class="benefits">
     <h2 class="h-secondary">Benefits</h2>
     <h3 class="h-tertiary">Why study with us</h3>
     <div class="cards">
       <div class="cards__card">
         <div class="cards__image-box">
-          <img class="cards__image" src="" alt="icon">
+          <img class="cards__image" src="../../../assets/images/clock.png" alt="icon">
         </div>
         <h4 class="h-four">Card title</h4>
         <p class="p-secondary">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas</p>
       </div>
       <div class="cards__card">
         <div class="cards__image-box">
-          <img class="cards__image" src="" alt="icon">
+          <img class="cards__image" src="../../../assets/images/favorites.png" alt="icon">
         </div>
         <h4 class="h-four">Card title</h4>
         <p class="p-secondary">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas</p>
       </div>
       <div class="cards__card">
         <div class="cards__image-box">
-          <img class="cards__image" src="" alt="icon">
+          <img class="cards__image" src="../../../assets/images/pda.png" alt="icon">
         </div>
         <h4 class="h-four">Card title</h4>
         <p class="p-secondary">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas</p>
       </div>
       <div class="cards__card">
         <div class="cards__image-box">
-          <img class="cards__image" src="" alt="icon">
+          <img class="cards__image" src="../../../assets/images/colors.png" alt="icon">
         </div>
         <h4 class="h-four">Card title</h4>
         <p class="p-secondary">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas</p>
       </div>
     </div>
   </div>
-  <div class="reviews">
+
+  <div id="opinions" class="reviews">
     <h2 class="h-secondary">Happy students</h2>
-    <div class="reviews__review">
-      <h3 class="h-tertiary">My review goes here</h3>
-      <p>hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+    <div class="review">
+      <h3 class="h-tertiary">{{reviews[counter].title}}</h3>
+      <div class="review__wrapper">
+        <div class="img-box">
+          <img [src]="reviews[counter].photo">
+        </div>
+        <p>{{reviews[counter].text}}</p>
+      </div>
+      <p class="review__studentName">{{reviews[counter].name}}</p>
     </div>
   </div>
   <footer class="footer">

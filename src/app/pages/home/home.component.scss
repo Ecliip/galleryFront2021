@@ -3,12 +3,37 @@
 
 .header {
   height: 6vh;
-  background-color: $orangePantone;
+  width: 100%;
+  background-color: rgba(0, 47, 118, .8);
+  color: $honeydew;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  & nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+
+    & a:not(:last-of-type) {
+      margin-right: 3rem;
+
+    }
+  }
+
+  a:link, a:visited {
+    color: $honeydew;
+    text-decoration: none;
+  }
 }
 
 .footer{
   height: 6vh;
-  background-color: $byzantium;
+  background-color: $prussianBlue;
 }
 
 .home {
@@ -16,7 +41,7 @@
   font-size: 1.6rem;
   min-height: 100vh;
   background-color: $honeydew;
-
+  position: relative;
 }
 
 .intro {
@@ -25,16 +50,17 @@
   background-color: $prussianBlue;
   display: flex;
   align-items: center;
-  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
-  background: url("../../../assets/images/gr.png") center right no-repeat, url("../../../assets/images/bbls.png") center left no-repeat, $prussianBlue;
-  background-size: 30%, 40%;
-  background-position: 80% 50%, 10% 50%;
+  clip-path: polygon(100% 0, 100% 80%, 51% 100%, 0 80%, 0 0);
+  background-image: url("../../../assets/images/ve.jpg");
+  background-position: center;
+  background-size: cover;
+
 
   &__content {
     background-color: rgb(37, 73, 135, .9);
     padding: 2rem 2rem;
     border-radius: 5px;
-    width: 30vw;
+    width: 50vw;
     //border: 1px solid red;
   }
 }
@@ -45,7 +71,11 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-color: coral;
+  background-color: #b4e7f8;
+  color: $prussianBlue;
+  padding: 2rem 0;
+
+
 }
 .cards {
   display: flex;
@@ -56,17 +86,56 @@
   &__card {
     width: 30rem;
     margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image-box {
+    width: 5rem;
+
+    img {
+      max-width: 100%;
+    }
   }
 }
 
 .reviews {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  padding: 2rem 0;
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
+  color: $prussianBlue;
   width: 100%;
   min-height: 40vh;
-  background-color: yellowgreen;
-  &__review {
-    width: 30vw;
+  background-color: #3CB0CD;
+
+  & .review {
+    width: 50%;
+
+    &__wrapper {
+      display: flex;
+
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    &__studentName {
+      text-align: right;
+    }
+  }
+
+  & .img-box {
+    width: 20rem;
+    margin-right: 2rem;
+    border-radius: 100%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
   }
 }
