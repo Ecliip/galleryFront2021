@@ -1,3 +1,10 @@
+# painting Gallery in progress
+
+A web page in angular for a painting gallery.
+
+### Tecnologies
+*Angular - typescript
+
 # Gallery2021Front
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
